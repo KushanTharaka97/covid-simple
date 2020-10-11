@@ -59,6 +59,17 @@
       $local_recovered=number_format($result -> data ->local_recovered)."<br>";
       $global_recovered=number_format($result -> data ->global_recovered)."<br>";
 
+      $local_active_cases=number_format($result -> data ->local_active_cases)."<br>";
+      $color;
+
+      if($result -> data ->local_active_cases> 1000){
+        $color="red";
+      }else if($result -> data ->local_active_cases> 500){
+        $color="orange";
+      }else{
+        $color="green";
+      }
+
       // echo "local_new_cases: ";
       // echo $result -> data ->local_new_cases;
       // "<br>";
@@ -77,13 +88,24 @@
 
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">Covid Details SriLanka</h5>
+  
+   
+
 </div>
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">COVID-19 situation in Srilanka</h1>
+  <h1 class="display-4" >COVID-19 situation in Srilanka</h1>
+
   <p class="lead">
     This data gathered from <b>"Health Promotion Bureau"</b> at : 
     <b><?php echo $result -> data ->update_date_time; ?> </b> in local time.
   </p>
+
+  <h5 class="my-0 mr-md-auto font-weight-normal" style="text-align:center;">
+    <b>Srilankan Active COVID-19 Patients: 
+      <?php 
+          echo $local_active_cases;
+      ?>
+    </h5>
 </div>
 
 <div class="container">
