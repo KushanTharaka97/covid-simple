@@ -13,7 +13,7 @@ The following **essential** functionality is completed:
 * [x] User can **view a list of total new cases reported locally and globally**
 * [x] User can **view a list of recoverd in locally and globally**
 * [x] User can **view a list of total cases reported in locally and globally**
-The following **optional** features are implemented:
+
 
 
 ## ScreenShot
