@@ -1,4 +1,4 @@
-# covid simple dash board
+# covid simple Dashboard
 using COVID Health Care Barau API in Srilanka made a web site for show state at the moment in PHP. 
 
 
